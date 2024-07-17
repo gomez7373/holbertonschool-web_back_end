@@ -3,4 +3,5 @@
     "test": "jest",
     "dev": "node"
   }
+  "type": "module"
 }
