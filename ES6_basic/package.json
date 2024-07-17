@@ -1,8 +1,7 @@
 {
   "scripts": {
     "test": "jest",
-    "dev": "node"
+    "dev": "node 0-main.js"
   },
   "type": "module"
 }
-
