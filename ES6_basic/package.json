@@ -2,6 +2,7 @@
   "scripts": {
     "lint": "./node_modules/.bin/eslint",
     "check-lint": "lint [0-9]*.js",
+    "dev": "npx babel-node",
     "dev-2": "npx babel-node 2-main.js",
     "dev-3": "npx babel-node 3-main.js",
     "dev-4": "npx babel-node 4-main.js",
