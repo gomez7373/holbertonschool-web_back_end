@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "ES6 Basics",
   "main": "0-constants.js",
+  "type": "module",
   "scripts": {
     "test": "jest"
   },
