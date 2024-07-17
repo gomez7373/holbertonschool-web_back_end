@@ -1,5 +1,4 @@
-// File: 0-constants.js
-export function taskFirst() {
+export function taskFirst(STRING) {
   const task = 'I prefer const when I can.';
   return task;
 }
