@@ -27,8 +27,14 @@ module.exports = {
       'LabeledStatement',
       'WithStatement',
     ],
+    'import/extensions': 'off',
+    'quotes': ['error', 'single'],
+    'jest/require-hook': 'off',
+    'eqeqeq': 'error',
+    'arrow-parens': ['error', 'always'],
+    'comma-dangle': ['error', 'always-multiline'],
   },
-  overrides:[
+  overrides: [
     {
       files: ['*.js'],
       excludedFiles: 'babel.config.js',
