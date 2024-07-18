@@ -27,10 +27,19 @@ module.exports = {
       'LabeledStatement',
       'WithStatement',
     ],
-    'import/extensions': 'off',
-    'quotes': ['error', 'single'],
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        js: 'always',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never',
+      },
+    ],
+    quotes: ['error', 'single'],
     'jest/require-hook': 'off',
-    'eqeqeq': 'error',
+    eqeqeq: 'error',
     'arrow-parens': ['error', 'always'],
     'comma-dangle': ['error', 'always-multiline'],
   },
@@ -38,6 +47,6 @@ module.exports = {
     {
       files: ['*.js'],
       excludedFiles: 'babel.config.js',
-    }
-  ]
+    },
+  ],
 };
