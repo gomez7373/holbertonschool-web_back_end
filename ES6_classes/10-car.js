@@ -19,7 +19,6 @@ export default class Car {
 
   cloneCar() {
     const clone = Object.create(Object.getPrototypeOf(this));
-    const sym = Symbol();
     for (const key of Object.getOwnPropertyNames(this)) {
       clone[key] = this[key];
     }
