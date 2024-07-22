@@ -9,4 +9,3 @@ export default function createInt8TypedArray(length, position, value) {
   int8Array.setInt8(position, value);
   return int8Array;
 }
-  
