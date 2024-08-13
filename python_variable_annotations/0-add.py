@@ -6,6 +6,7 @@ This module provides a function to add two
 floating-point numbers and return their sum.
 """
 
+
 def add(a: float, b: float) -> float:
     """
     Add two floats and return their sum.
