@@ -6,6 +6,7 @@ Module for asynchronous coroutine that waits for a random delay.
 import asyncio
 import random
 
+
 async def wait_random(max_delay: int = 10) -> float:
     """
     Asynchronous coroutine that waits for a random delay between
