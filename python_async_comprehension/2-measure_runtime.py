@@ -8,9 +8,6 @@ import asyncio  # Import asyncio for asynchronous programming
 import time  # Import time to measure the runtime of the function
 import importlib  # Import the importlib module to handle dynamic imports
 
-# Suppress the invalid-name warning for this module
-# pylint: disable=invalid-name
-
 # Using importlib allows us to import a module with a non-standard name
 async_comprehension = importlib.import_module(
     "1-async_comprehension"
