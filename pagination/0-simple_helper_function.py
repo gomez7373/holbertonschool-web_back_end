@@ -1,4 +1,4 @@
-# pylint: disable=C0103
+#!/usr/bin/env python3
 """
 This module provides a helper function for calculating index ranges
 for pagination purposes.

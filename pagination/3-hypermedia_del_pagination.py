@@ -1,4 +1,4 @@
-# pylint: disable=C0103
+#!/usr/bin/env python3
 """
 This module contains the Server class with methods to paginate a dataset
 and handle deletion-resilient hypermedia pagination.

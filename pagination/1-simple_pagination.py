@@ -1,4 +1,4 @@
-# pylint: disable=C0103
+#!/usr/bin/env python3
 """
 This module contains the Server class for paginating
 a dataset of popular baby names.
