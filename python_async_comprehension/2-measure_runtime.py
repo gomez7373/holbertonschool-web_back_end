@@ -9,8 +9,9 @@ import time  # Import time to measure the runtime of the function
 import importlib  # Import the importlib module to handle dynamic imports
 
 # Import the async_comprehension function dynamically
-async_comprehension = importlib.import_module("1-async_comprehension")\
-    .async_comprehension
+async_comprehension = importlib.import_module(
+    "1-async_comprehension"
+).async_comprehension
 
 
 # Define an asynchronous function to measure the runtime
