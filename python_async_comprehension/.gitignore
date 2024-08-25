@@ -1,1 +1,11 @@
 .venv/
+# Ignore node_modules directory
+node_modules/
+
+# Ignore Python virtual environment directory
+myenv/
+
+# Ignore package.json and package-lock.json files
+package.json
+package-lock.json
+
