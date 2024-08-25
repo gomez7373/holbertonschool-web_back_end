@@ -7,6 +7,7 @@ when executed four times in parallel.
 import asyncio  # Import asyncio for asynchronous programming
 import time  # Import time to measure the runtime of the function
 import importlib  # Import the importlib module to handle dynamic imports
+from typing import List  # Import typing for type annotations and list
 
 # Import the async_comprehension function dynamically
 async_comprehension = importlib.import_module(
@@ -33,5 +34,5 @@ async def measure_runtime() -> float:
         async_comprehension(),
     )
 
-    end_time = time.perf_counter()  # Record the end time
+    end_time = time.time()  # Record the end time
     return end_time - start_time  # Return the total time taken
