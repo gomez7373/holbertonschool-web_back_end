@@ -8,10 +8,9 @@ import asyncio  # Import asyncio for asynchronous programming
 import time  # Import time to measure the runtime of the function
 import importlib  # Import the importlib module to handle dynamic imports
 
-# Using importlib allows us to import a module with a non-standard name
-async_comprehension = importlib.import_module(
-    "1-async_comprehension"
-).async_comprehension
+# Import the async_comprehension function dynamically
+async_comprehension = importlib.import_module("1-async_comprehension") \
+    .async_comprehension
 
 
 # Define an asynchronous function to measure the runtime
@@ -25,7 +24,7 @@ async def measure_runtime() -> float:
     """
     start_time = time.perf_counter()  # Record the start time
 
-    # Run 4 instances of async_comprehension in parallel using asyncio.gather
+    # Execute async_comprehension 4 times in parallel using asyncio.gather
     await asyncio.gather(
         async_comprehension(),
         async_comprehension(),
@@ -33,5 +32,5 @@ async def measure_runtime() -> float:
         async_comprehension(),
     )
 
-    #end_time = time.perf_counter()  # Record the end time
-    return time.perf_counter() - start_time  # Return the total time taken
+    end_time = time.perf_counter()  # Record the end time
+    return end_time - start_time  # Return the total time taken
