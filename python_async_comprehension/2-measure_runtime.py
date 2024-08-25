@@ -5,15 +5,16 @@ when executed four times in parallel.
 """
 
 import asyncio  # Import asyncio for asynchronous programming
-import time     # Import time to measure the runtime of the function
+import time  # Import time to measure the runtime of the function
 import importlib  # Import the importlib module to handle dynamic imports
 
 # Suppress the invalid-name warning for this module
 # pylint: disable=invalid-name
 
 # Using importlib allows us to import a module with a non-standard name
-async_comprehension = importlib.import_module('1-async_comprehension')\
-    .async_comprehension
+async_comprehension = importlib.import_module(
+    "1-async_comprehension"
+).async_comprehension
 
 
 # Define an asynchronous function to measure the runtime
@@ -32,8 +33,8 @@ async def measure_runtime() -> float:
         async_comprehension(),
         async_comprehension(),
         async_comprehension(),
-        async_comprehension()
+        async_comprehension(),
     )
 
     end_time = time.perf_counter()  # Record the end time
-    return end_time - start_time    # Return the total time taken
+    return end_time - start_time  # Return the total time taken
