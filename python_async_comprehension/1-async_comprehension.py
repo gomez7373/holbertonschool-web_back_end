@@ -2,9 +2,9 @@
 from typing import List  # Import typing for type annotations
 import importlib  # Import the importlib module to handle dynamic imports
 
-# Dynamically import the async_generator function from the 0-async_generator module
 # Using importlib allows us to import a module with a non-standard name
 async_generator = importlib.import_module('0-async_generator').async_generator
+
 
 # Define an asynchronous function that collects 10 random numbers
 async def async_comprehension() -> List[float]:
