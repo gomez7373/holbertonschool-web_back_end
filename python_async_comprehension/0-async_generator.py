@@ -11,8 +11,8 @@ from typing import AsyncGenerator  # Import typing for type annotations
 
 # Define an asynchronous generator function
 async def async_generator() -> AsyncGenerator[float, None]:
-    
-    
+
+
     """
     Asynchronously generates and yields 10 random numbers between 0 and 10,
     with a 1-second delay between each number.
