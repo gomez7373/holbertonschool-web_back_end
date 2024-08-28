@@ -1,16 +1,19 @@
 #!/usr/bin/env python3
+"""it will print info f nginx logs """
 from pymongo import MongoClient
 
 if __name__ == "__main__":
+    """ check for all elements in a collection """
     client = MongoClient('mongodb://127.0.0.1:27017')
-    nginx_collection = client.logs.nginx
+    collection = client.logs.nginx
 
-    print("{} logs".format(nginx_collection.count_documents({})))
+    print(f"{collection.estimated_document_count()} logs")
+
     print("Methods:")
-    print("\tmethod GET: {}".format(nginx_collection.count_documents({"method": "GET"})))
-    print("\tmethod POST: {}".format(nginx_collection.count_documents({"method": "POST"})))
-    print("\tmethod PUT: {}".format(nginx_collection.count_documents({"method": "PUT"})))
-    print("\tmethod PATCH: {}".format(nginx_collection.count_documents({"method": "PATCH"})))
-    print("\tmethod DELETE: {}".format(nginx_collection.count_documents({"method": "DELETE"})))
-    print("{} status check".format(nginx_collection.count_documents({"method": "GET", "path": "/status"})))
+    for method in ["GET", "POST", "PUT", "PATCH", "DELETE"]:
+        method_count = collection.count_documents({'method': method})
+        print(f"\tmethod {method}: {method_count}")
 
+    check_get = collection.count_documents(
+        {'method': 'GET', 'path': "/status"})
+    print(f"{check_get} status check")

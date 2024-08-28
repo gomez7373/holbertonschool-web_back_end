@@ -1,3 +1,6 @@
-// my comment
-db.school.updateMany({ "name": "Holberton school" }, { $set: { "address": "972 Mission street" } })
-
+// this Script updates the address of the document
+db.school.update(
+	{ "name" : "Holberton school"},
+	{ $set: { "address": "972 Mission street" } },
+	{ multi: true }
+)

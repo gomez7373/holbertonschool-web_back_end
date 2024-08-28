@@ -1,14 +1,11 @@
 #!/usr/bin/env python3
-from pymongo import MongoClient
+""" pymongo list """
 
-def insert_school(mongo_collection, **kwargs):
-    """Inserts a new document in a collection"""
-    result = mongo_collection.insert_one(kwargs)
-    return result.inserted_id
+import pymongo
 
-if __name__ == "__main__":
-    client = MongoClient('mongodb://127.0.0.1:27017')
-    school_collection = client.my_db.school
-    new_school_id = insert_school(school_collection, name="UCSF", address="505 Parnassus Ave")
-    print("New school created: {}".format(new_school_id))
 
+def list_all(mongo_collection):
+    """ List all elements in a collection """
+    if not mongo_collection:
+        return []
+    return list(mongo_collection.find())

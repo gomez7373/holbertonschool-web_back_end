@@ -1,3 +1,2 @@
-// my comment
-db.school.find({ "name": "Holberton school" }).pretty()
-
+//it will list all documents where name = Holberton School
+db.school.find({ "name" : "Holberton school" })
