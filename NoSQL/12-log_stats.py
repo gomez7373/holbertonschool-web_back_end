@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-""" returns the number of documents in a collection """
+""" this is the last function of the day """
 from pymongo import MongoClient
 
 if __name__ == "__main__":
