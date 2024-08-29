@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""it will print info f nginx logs """
+""" returns the number of documents in a collection """
 from pymongo import MongoClient
 
 if __name__ == "__main__":
-    """ check for all elements in a collection """
+    """Last function of the day"""
     client = MongoClient('mongodb://127.0.0.1:27017')
     collection = client.logs.nginx
 
