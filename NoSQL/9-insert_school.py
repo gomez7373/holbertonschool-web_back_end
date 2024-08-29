@@ -4,8 +4,7 @@
 import pymongo
 
 
-def list_all(mongo_collection):
-    """ List all elements in a collection """
-    if not mongo_collection:
-        return []
-    return list(mongo_collection.find())
+def insert_school(mongo_collection, **kwargs):
+    """ it will list all elements in a collection """
+    result = mongo_collection.insert_one(kwargs)
+    return result.inserted_id
