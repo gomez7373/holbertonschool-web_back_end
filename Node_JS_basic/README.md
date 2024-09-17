@@ -525,6 +525,6 @@ Project badge
 0%
 Your score will be updated as you progress.
 
-Please review all the tasks before you start the peer review.
+Please review all the tasks before you start the peer review..
 
 
