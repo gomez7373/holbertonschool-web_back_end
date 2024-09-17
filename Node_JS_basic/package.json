@@ -1,12 +1,32 @@
 {
-  "name": "node_js_basic",
+  "name": "node_js_basics",
   "version": "1.0.0",
-  "description": "Curriculum [C#23] Foundations v2 - Part 3 Average: 99.15% Project badge 0% NodeJS Basics  Amateur  By: Johann Kerbrat, Engineering Manager at Uber Works  Weight: 1  Migrated to checker v2:   Your score will be updated as you progress.",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "./node_modules/.bin/eslint",
+    "check-lint": "lint [0-9]*.js",
+    "test": "./node_modules/mocha/bin/mocha --require babel-register --exit",
+    "dev": "nodemon --exec babel-node --presets babel-preset-env ./server.js ./database.csv"
   },
-  "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "chai-http": "^4.3.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^0.0.0",
+    "chai": "^4.4.1",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jest": "^28.8.3",
+    "lint": "*",
+    "mocha": "^10.7.3",
+    "nodemon": "^3.1.5",
+    "request": "^2.88.2",
+    "sinon": "^7.5.0"
+  }
 }
