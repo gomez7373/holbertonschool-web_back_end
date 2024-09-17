@@ -1,0 +1,12 @@
+{
+  "name": "node_js_basic",
+  "version": "1.0.0",
+  "description": "Curriculum [C#23] Foundations v2 - Part 3 Average: 99.15% Project badge 0% NodeJS Basics  Amateur  By: Johann Kerbrat, Engineering Manager at Uber Works  Weight: 1  Migrated to checker v2:   Your score will be updated as you progress.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
