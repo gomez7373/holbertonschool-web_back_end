@@ -6,9 +6,16 @@ class StudentsController {
 
     readDatabase(databasePath)
       .then((fields) => {
-        res.status(200).send(`This is the list of our students\n${Object.keys(fields).sort().map(field => `Number of students in ${field}: ${fields[field].length}. List: ${fields[field].join(', ')}`).join('\n')}`);
+        let responseText = 'This is the list of our students\n';
+
+        // Sort fields alphabetically and case-insensitive
+        Object.keys(fields).sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase())).forEach((field) => {
+          responseText += `Number of students in ${field}: ${fields[field].length}. List: ${fields[field].join(', ')}\n`;
+        });
+
+        res.status(200).send(responseText.trim()); // Use trim() to remove the last newline
       })
-      .catch(() => {
+      .catch((error) => {
         res.status(500).send('Cannot load the database');
       });
   }
@@ -24,7 +31,11 @@ class StudentsController {
 
     readDatabase(databasePath)
       .then((fields) => {
-        res.status(200).send(`List: ${fields[major].join(', ')}`);
+        if (!fields[major]) {
+          res.status(500).send('Major parameter must be CS or SWE');
+        } else {
+          res.status(200).send(`List: ${fields[major].join(', ')}`);
+        }
       })
       .catch(() => {
         res.status(500).send('Cannot load the database');
